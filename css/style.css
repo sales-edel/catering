@@ -13,6 +13,7 @@
   --white: #ffffff;
   --gray: #6c757d;
   --gray-laut: #999999;
+  --slogan-white: #e2e6f3;
 }
 p {
   padding-bottom: 5px;
@@ -62,7 +63,7 @@ body {
   width: 85px;
 }
 .wrapper .header .slogan {
-  color: #e2e6f3;
+  color: var(--slogan-white);
   text-align: center;
   align-self: center;
 }
@@ -75,64 +76,9 @@ body {
   text-decoration: none;
   vertical-align: middle;
 }
-.wrapper .menu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  border-top: 1px solid var(--gray-laut);
-  border-bottom: 1px solid var(--gray-laut);
-  text-transform: uppercase;
-  justify-content: left;
-  font-size: 16px;
-}
-.wrapper .menu div {
-  display: grid;
-  text-align: center;
-}
-.wrapper .menu a {
-  color: #333;
-  padding: 8px 30px;
-  transition: 0.5s;
-}
-.wrapper .menu a:hover {
-  background: #2d2d2b;
-  color: #ffffff;
-  transition: 0.5s;
-}
 .wrapper .container {
   display: grid;
   grid-template-columns: 300px 1fr;
-}
-/* --------- Меню ліве ------------------------------------------------------ */
-.wrapper .container .main_menu {
-  color: #000000;
-  margin-right: 20px;
-  margin-top: 20px;
-  background-color: #fffbee;
-}
-.wrapper .container .main_menu .root-nav a {
-  display: block;
-}
-.wrapper .container .main_menu ul li {
-  position: relative;
-  border-bottom: 1px dotted #000000;
-  padding: 10px 8px;
-}
-.wrapper .container .main_menu ul li:hover {
-  background: #2d2d2b;
-}
-.wrapper .container .main_menu ul li:hover a {
-  color: #ffffff;
-  transition: 0.2s;
-}
-.wrapper .container .main_menu a {
-  text-decoration: none;
-  color: #1d2a65;
-  transition: 0.2s;
-}
-.wrapper .container .main_menu a:hover {
-  background: #2d2d2b;
-  color: #ffffff;
-  transition: 0.2s;
 }
 /* ---------під Меню першого пункта ------------------------------------------------------ */
 .wrapper .container .article {
@@ -256,89 +202,4 @@ tfoot td {
 }
 .wrapper .footer #top:hover {
   border-bottom-color: #ecbe2a;
-}
-@media (max-width: 1200px) {
-  .wrapper {
-    width: 100%;
-  }
-  .wrapper .header {
-    grid-template-columns: repeat(150px auto-fit, minmax(150px, 1fr) auto);
-    height: auto;
-  }
-  .wrapper .article {
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    padding-right: 20px;
-    padding-bottom: 10px;
-  }
-}
-@media (max-width: 880px) {
-  .wrapper .slogan {
-    padding: 10px;
-  }
-  .wrapper .container {
-    grid-template-columns: 270px 1fr;
-  }
-  .wrapper .footer {
-    display: grid;
-    grid-template-columns: repeat(7, auto);
-    grid-gap: 10px;
-  }
-}
-@media (max-width: 750px) {
-  .wrapper .header {
-    font-size: 0.8rem;
-  }
-  .wrapper .header .logo a {
-    text-align: center;
-  }
-  .wrapper .header slogan:nth-child(2) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-  .wrapper .header div:nth-child(3) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-  .wrapper .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-    padding: 0 20px 0 20px;
-  }
-}
-@media (max-width: 500px) {
-  .wrapper .header {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-  }
-  .wrapper .header .logo {
-    margin: 10px 0 0 90px;
-  }
-  .wrapper .header .slogan h1 {
-    margin: 0;
-  }
-  .wrapper .header .grafic {
-    margin: 0 0 5px 10px;
-  }
-  .wrapper .menu div {
-    border-bottom: none;
-  }
-  .wrapper .menu a {
-    padding: 5px 20px;
-    font-size: 15px;
-  }
-  .wrapper .container .main_menu ul li {
-    padding: 5px;
-  }
-  .wrapper .container .main_menu {
-    margin: 5px 10px;
-  }
-  .wrapper .container .article {
-    padding: 0 10px 0 10px;
-  }
-  .wrapper .footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, auto);
-    grid-gap: 5px;
-  }
 }
